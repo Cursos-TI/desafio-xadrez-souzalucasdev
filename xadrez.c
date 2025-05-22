@@ -5,7 +5,7 @@
 // O objetivo é utilizar estruturas de repetição e funções para determinar os limites de movimentação dentro do jogo.
 
 int main() {
-    int movimentoDiagonal = 0, movimentoHorizontal = 0;
+    int bispoDiagonal = 0, rainhaEsquerda = 0, movimentoBaixo = 0;
 
     //Torre - Movimento linear
     for(int i=1; i<6; i++){
@@ -15,15 +15,29 @@ int main() {
     //Bispo - Movimento diagonal
     do {
         printf("Bispo moveu uma casa na diagonal superior direita \n");
-        movimentoDiagonal++;
-    } while(movimentoDiagonal < 5);
+        bispoDiagonal++;
+    } while(bispoDiagonal < 5);
         
 
     //Rainha - Movimento híbrido
-    while(movimentoHorizontal <= 8){
+    while(rainhaEsquerda <= 8){
         printf("Rainha moveu uma casa para a esquerda \n");
-        movimentoHorizontal++;
+        rainhaEsquerda++;
     }
+
+    //Cavalo - Movimento em L
+    int i = 1;
+
+    while(i<=2){
+        printf("Cavalo moveu uma casa para baixo \n");
+        i++;
+
+        for(i; i>2;){
+            printf("Cavalo moveu uma casa para a esquerda \n");
+            break;
+        }
+    }
+
 
 
     // Nível Novato - Movimentação das Peças
